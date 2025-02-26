@@ -4,7 +4,7 @@
 
 # Data Set: https://www.kaggle.com/datasets/mikhail1681/walmart-sales/data 
 # Colunas: 
-	       Store (Store number).
+           Store (Store number).
            Date (Sales week start date)
            Weekly_Sales (Sales)
            Holiday_Flag (Mark on the presence or absence of a holiday)
