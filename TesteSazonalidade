@@ -1,0 +1,31 @@
+import pandas as pd
+import matplotlib.pyplot as plt
+import seaborn as sns
+
+# Carregar os dados
+df = pd.read_csv("Walmart_Sales.csv")
+
+# Converter a coluna 'Date' para formato de data
+df["Date"] = pd.to_datetime(df["Date"], format="%d-%m-%Y")
+
+# Converter a temperatura de Fahrenheit para Celsius
+df['Temperature'] = (df['Temperature'] - 32) * 5/9
+
+# Criar gráfico de dispersão entre Temperatura e Vendas Semanais
+plt.figure(figsize=(10, 6))
+sns.scatterplot(data=df, x="Temperature", y="Weekly_Sales", alpha=0.5)
+plt.title("Relação entre Temperatura e Vendas Semanais")
+plt.xlabel("Temperatura (°C)")
+plt.ylabel("Vendas Semanais ($)")
+plt.grid(True)
+plt.show()
+
+# Criar matriz de correlação
+sns.set(style="whitegrid")
+correlation_matrix = df.drop(['Store', 'Date'], axis=1).corr()
+
+# Gerar um mapa de calor da matriz de correlação
+plt.figure(figsize=(10, 8))
+sns.heatmap(correlation_matrix, annot=True, cmap='coolwarm', linewidths=0.5)
+plt.title('Matriz de Correlação')
+plt.show()
