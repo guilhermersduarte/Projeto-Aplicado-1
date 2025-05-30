@@ -2,7 +2,7 @@
 
 Este repositório contém a análise de dados das vendas do Walmart, desenvolvida como parte do Projeto Aplicado 1. O projeto explora diversos fatores que influenciam as vendas, como temperatura, desemprego e feriados.
 
-A apresentácão do projeto se encontra no Youtube, pode ser vista aqui: https://www.youtube.com/watch?v=BCe41GIgLXI
+A apresentação do projeto se encontra no Youtube, pode ser vista aqui: https://www.youtube.com/watch?v=BCe41GIgLXI
 
 ## Estrutura do Repositório
 
